@@ -248,7 +248,7 @@ export default function Payment() {
             </div>
           </div>
 
-          <h4>Pagamento</h4>
+          <h4>Pagamentos</h4>
 
           <div >
             <label htmlFor='creditCardNumber'>Número dos cartões</label>
