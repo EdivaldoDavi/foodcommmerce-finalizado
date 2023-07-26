@@ -270,7 +270,7 @@ export default function Payment() {
                     },
                     {
                       mask: '0000 0000 0000 0000',
-                      max: 16,
+                      max: 16
                     },
                   ]}
                   onChange={onChange}
