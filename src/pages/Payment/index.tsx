@@ -261,7 +261,7 @@ export default function Payment() {
                   id='creditCardNumber'
                   mask={[
                     {
-                      mask: '0000 0000 0000 0000',
+                      mask: '0000 000000 00 0000',
                       blocks: {
                         RGB: {
                           mask: IMask.MaskedRange,
