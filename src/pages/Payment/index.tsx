@@ -261,17 +261,18 @@ export default function Payment() {
                   id='creditCardNumber'
                   mask={[
                     {
-                      mask: '9999 999999 9999',
-
+                      mask: 'RGB,RGB,RGB',
+                      blocks: {
+                        RGB: {
+                          mask: IMask.MaskedRange,
+                          from: 0,
+                          to: 255
+                        }
+                      }
                     },
                     {
-                      mask: '9999 999999 99999',
-
-                    },
-                    {
-                      mask: '9999 9999 9999 9999',
-
-                    },
+                      mask: /^#[0-9a-f]{0,6}$/i
+                    }
                   ]}
                   onChange={onChange}
                   onBlur={onBlur}
