@@ -259,19 +259,12 @@ export default function Payment() {
                 <IMaskInput
                   type='text'
                   id='creditCardNumber'
-                  mask={[
-                    {
-                      mask: '0000 000000 0000',
-                      max: 14,
-                    },
-                    {
-                      mask: '0000 000000 00000',
-                      max: 15,
-                    },
-                    {
-                      mask: '0000 0000 0000 0000',
-                    },
-                  ]}
+                  mask="9999 9999 9999 9999"
+                  maskChar="_"
+                  alwaysShowMask={true}
+                  formatChars={{
+                    '9': '[0-9]',
+                  }}
                   onChange={onChange}
                   onBlur={onBlur}
                   value={value}
