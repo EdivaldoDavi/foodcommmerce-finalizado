@@ -251,7 +251,7 @@ export default function Payment() {
 
           <h4>Pagamento</h4>
 
-                  <CreditCardInput/>
+
 
           <div className='field'>
             <label htmlFor='creditCardHolder'>Nome impresso no cartão</label>
