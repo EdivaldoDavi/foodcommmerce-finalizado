@@ -251,7 +251,7 @@ export default function Payment() {
           <h4>Pagamento</h4>
 
           <div >
-            <label htmlFor='creditCardNumber'>Número do cartão</label>
+            <label htmlFor='creditCardNumber'>Número dos cartão</label>
             <CreditCardInput />
           </div>
 
