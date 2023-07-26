@@ -14,7 +14,6 @@ import { FieldValues, schema } from './validationSchema'
 
 import IMask from 'imask'
 import { Container, Form, Inner } from './styles'
-import CreditCardInput from '../../components/CreditCardInput'
 
 export default function Payment() {
   const { payOrder } = useCart()
@@ -249,9 +248,38 @@ export default function Payment() {
             </div>
           </div>
 
-          <h4>Pagamentos</h4>
+          <h4>Pagamento</h4>
 
-
+          <div className='field'>
+            <label htmlFor='creditCardNumber'>Número do cartão</label>
+            <Controller
+              name='creditCardNumber'
+              control={control}
+              render={({ field: { onChange, onBlur, value } }) => (
+                <IMaskInput
+                  type='text'
+                  id='creditCardNumber'
+                  mask={[
+                    {
+                      mask: '0000 000000 0000',
+                      max: 14,
+                    },
+                    {
+                      mask: '0000 000000 00000',
+                      max: 15,
+                    },
+                    {
+                      mask: '0000 0000 0000 0000',
+                    },
+                  ]}
+                  onChange={onChange}
+                  onBlur={onBlur}
+                  value={value}
+                />
+              )}
+            />
+            {errors.creditCardNumber && <p className='error'>{errors.creditCardNumber.message}</p>}
+          </div>
 
           <div className='field'>
             <label htmlFor='creditCardHolder'>Nome impresso no cartão</label>
