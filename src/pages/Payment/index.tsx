@@ -262,7 +262,7 @@ export default function Payment() {
                   mask={[
 
                     {
-                      mask: '0000 0000 0000 0000',
+                      mask: '9999 9999 9999 9999' ,
                       max: 16
                     },
                   ]}
