@@ -262,15 +262,15 @@ export default function Payment() {
                   mask={[
                     {
                       mask: '0000 000000 0000',
-                      max: 14,
+                      max: 16,
                     },
                     {
                       mask: '0000 000000 00000',
-                      max: 15,
+                      max: 17,
                     },
                     {
                       mask: '0000 0000 0000 0000',
-                      max: 16,
+                      max: 18,
                     },
                   ]}
                   onChange={onChange}
