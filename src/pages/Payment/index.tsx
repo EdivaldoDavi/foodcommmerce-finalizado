@@ -14,7 +14,8 @@ import { FieldValues, schema } from './validationSchema'
 
 import IMask from 'imask'
 import { Container, Form, Inner } from './styles'
-import CreditCardInput from './../../components/CreditCardInput/index';
+import CreditCardInput from '../../components/CreditCardInput'
+
 export default function Payment() {
   const { payOrder } = useCart()
   const {
@@ -28,7 +29,7 @@ export default function Payment() {
 
   return (
     <Container>
-      <Head title='Pagamentos' />
+      <Head title='Pagamento' />
       <OrderHeader />
       <Inner>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -248,12 +249,9 @@ export default function Payment() {
             </div>
           </div>
 
-          <h4>Pagamentos</h4>
+          <h4>Pagamento</h4>
 
-          <div >
-            <label htmlFor='creditCardNumber'>Número dos cartões</label>
-            <CreditCardInput />
-          </div>
+                  <CreditCardInput/>
 
           <div className='field'>
             <label htmlFor='creditCardHolder'>Nome impresso no cartão</label>
