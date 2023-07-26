@@ -256,9 +256,7 @@ export default function Payment() {
               name='creditCardNumber'
               control={control}
               render={({ field: { onChange, onBlur, value } })  => (
-                onChange={onChange}
-                onBlur={onBlur}
-                value={value}
+
 
                 <IMaskInput
                   type='text'
@@ -277,7 +275,9 @@ export default function Payment() {
                     },
                   ]}
 
-
+                  onChange={onChange}
+                  onBlur={onBlur}
+                  value={value}
                 />
               )}
             />
