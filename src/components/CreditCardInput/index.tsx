@@ -3,7 +3,7 @@ import NumberFormat from 'react-number-format';
 
 const CreditCardInput = () => {
   // Função para formatar a máscara do cartão de crédito
-  const formatCreditCardNumber = (value: string) => {
+  const formatCreditCardNumber = (value) => {
     const cleanValue = value.replace(/\s+/g, ''); // Remover espaços em branco
     let formattedValue = '';
 
