@@ -260,14 +260,7 @@ export default function Payment() {
                   type='text'
                   id='creditCardNumber'
                   mask={[
-                    {
-                      mask: '0000 000000 0000',
-                      max: 14,
-                    },
-                    {
-                      mask: '0000 000000 00000',
-                      max: 15,
-                    },
+
                     {
                       mask: '0000 0000 0000 0000',
                       max: 16
