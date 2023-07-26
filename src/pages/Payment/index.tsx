@@ -261,16 +261,15 @@ export default function Payment() {
                   id='creditCardNumber'
                   mask={[
                     {
-                      mask: '9999 999999 9999',
-                      max: 16,
+                      mask: '0000 000000 0000',
+                      max: 14,
                     },
                     {
-                      mask: '9999 999999 999999',
-                      max: 17,
+                      mask: '0000 000000 00000',
+                      max: 15,
                     },
                     {
-                      mask: '9999 9999 9999 9999',
-                      max: 18,
+                      mask: '0000 0000 0000 0000',
                     },
                   ]}
                   onChange={onChange}
